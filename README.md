@@ -1,4 +1,4 @@
-# 🚀 Релиз модели в продакшен
+# Релиз модели в продакшен
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/Docker-Container-blue?style=flat&logo=docker)](https://www.docker.com/)
@@ -6,7 +6,7 @@
 
 **Churn Prediction API:** FastAPI-сервис предсказания оттока клиентов (CatBoost), контейнеризация, готовность к мониторингу.
 
-## 📋 Описание проекта
+## Описание проекта
 
 Проект по выкату ML-модели в продакшен: контейнеризация, API, пайплайн доставки и мониторинг. Демонстрирует полный цикл от обученной модели до работающего сервиса.
 
@@ -31,8 +31,8 @@
 ## Клонирование и запуск
 
 ```bash
-git clone https://github.com/DataClasse/production-release.git
-cd production-release
+git clone https://github.com/DataClasse/churn-prediction-api.git
+cd churn-prediction-api
 pip install -r requirements.txt
 uvicorn app.churn_app:app --reload --port 8081 --host 0.0.0.0
 ```
@@ -45,14 +45,14 @@ uvicorn app.churn_app:app --reload --port 8081 --host 0.0.0.0
 
 Путь к модели задаётся переменной окружения `MODEL_PATH` (по умолчанию `models/catboost_churn_model.bin`).
 
-## 🎯 Ключевые достижения
+## Ключевые достижения
 
-- ✅ Контейнеризация ML-сервиса (Docker)
-- ✅ REST API для получения предсказаний
-- ✅ Версионирование артефактов и воспроизводимость деплоя
-- ✅ При необходимости — интеграция с CI/CD и мониторингом
+- Контейнеризация ML-сервиса (Docker)
+- REST API для получения предсказаний
+- Версионирование артефактов и воспроизводимость деплоя
+- При необходимости — интеграция с CI/CD и мониторингом
 
-## 🛠 Технологический стек
+## Технологический стек
 
 - **Python** 3.8+, **FastAPI** — API
 - **CatBoost** — модель оттока
@@ -60,28 +60,28 @@ uvicorn app.churn_app:app --reload --port 8081 --host 0.0.0.0
 - **MLflow** — артефакты и версии моделей
 - При необходимости: **Kubernetes**, **Grafana**, **Prometheus**
 
-## 🏗 Архитектура решения
+## Архитектура решения
 
 ```
 Обученная модель (MLflow/S3)
-        ↓
-   Загрузка в сервис
-        ↓
-   FastAPI + Docker
-        ↓
-   Production API
-        ↓
-   Мониторинг (опционально)
+ ↓
+ Загрузка в сервис
+ ↓
+ FastAPI + Docker
+ ↓
+ Production API
+ ↓
+ Мониторинг (опционально)
 ```
 
-## 👤 Автор
+## Автор
 
 **Дмитрий Щербаков**
 
-- 🔗 **Код:** [github.com/DataClasse/production-release](https://github.com/DataClasse/production-release)
-- 📧 Email: [aiopendata@gmail.com](mailto:aiopendata@gmail.com)
-- 💻 GitHub: [@DataClasse](https://github.com/DataClasse)
+- **Код:** [github.com/DataClasse/churn-prediction-api](https://github.com/DataClasse/churn-prediction-api)
+- Email: [aiopendata@gmail.com](mailto:aiopendata@gmail.com)
+- GitHub: [@DataClasse](https://github.com/DataClasse)
 
 ---
 
-⭐ Если проект был полезен, поставьте звезду!
+ Если проект был полезен, поставьте звезду!
