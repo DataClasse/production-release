@@ -7,7 +7,7 @@ def load_churn_model(model_path: str):
         model_path (str): Путь до модели.
     """
     try:
-        # ваш код здесь — загрузите модель
+        # загрузка модели
         model = CatBoostClassifier()
         model.load_model(model_path)
         print("Model loaded successfully")
